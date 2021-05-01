@@ -13,26 +13,28 @@ public class LoginPage extends Base {
 		hpf.verifySearchOnHomePage();
 		hpf.selectWomenTshirts();
 		
-		//product is viewed, verified, quantity and size are set
+		//product is viewed, verified, quantity and size are set. product page test cases are executed
 		ProductPage pp = new ProductPage();
 		pp.viewProduct();
 		pp.verifyProduct();
 		pp.setProductQuantity();
 		pp.setProductSize();
-		//pp.selectProductColor();
+		pp.selectProductColor();
 		pp.addProductsToCart();
 		pp.verifyCart();
+		pp.clickCheckoutBtn();
 		
-		//product page test cases are executed
+		//checkout page test cases are executed
+		CheckoutPage cp = new CheckoutPage();
+		cp.verifyCheckoutPage();
+		cp.clickCheckOut();
 		
-		
-		
-
-//		loginPageFunctions lpf = new loginPageFunctions();
-//		lpf.clickSignInButton();
-//		lpf.verifySignInPage();
-//		lpf.loginToAccount();
-//		lpf.verifyLoginStatus();
+		//login page test cases are executed
+		loginPageFunctions lpf = new loginPageFunctions();
+		lpf.clickSignInButton();
+		lpf.verifySignInPage();
+		lpf.loginToAccount();
+		lpf.verifyLoginStatus();
 		
 		
 
