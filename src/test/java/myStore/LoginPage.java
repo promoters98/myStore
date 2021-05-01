@@ -3,7 +3,7 @@ package myStore;
 public class LoginPage extends Base {
 	public static void main(String[] args) {
 		
-		//Chrome browser is setup and user naviagtes to home page
+		//Chrome browser is setup and user navigates to home page
 		chromeSetup();
 		navigateToHomePage();
 		
@@ -28,17 +28,19 @@ public class LoginPage extends Base {
 		CheckoutPage cp = new CheckoutPage();
 		cp.verifyCheckoutPage();
 		cp.clickCheckOut();
-		
-		//login page test cases are executed
 		loginPageFunctions lpf = new loginPageFunctions();
-		lpf.clickSignInButton();
-		lpf.verifySignInPage();
+//		lpf.clickSignInButton();
+//		lpf.verifySignInPage();
 		lpf.loginToAccount();
-		lpf.verifyLoginStatus();
+//		lpf.verifyLoginStatus();
+		cp.clickAddressCheckout();
+		cp.checkAcceptTermsChkBox();
+		cp.clickShippingCheckout();
+		cp.selectPayByWire();
+		cp.clickConfirmOrderBtn();
+		cp.verifyOrderCompletion();
 		
-		
-
-		// tearDown();
+		tearDown();
 	}
 
 }
