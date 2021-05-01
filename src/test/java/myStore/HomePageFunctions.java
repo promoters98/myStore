@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class HomePage extends Base {
-
+public class HomePageFunctions extends Base {
+	
 	public void verifyHomePage() {
 		String currentUrl = driver.getCurrentUrl();
 		Data d = new Data();
@@ -32,5 +32,8 @@ public class HomePage extends Base {
 		action.moveToElement(women).perform();
 		WebElement tshirts = driver.findElement(By.cssSelector("a[title=T-shirts]"));
 		tshirts.click();
+		System.out.println("User has clicked on T-shirts.");
 	}
 }
+
+
