@@ -39,6 +39,7 @@ public class LoginPage extends Base {
 		cp.selectPayByWire();
 		cp.clickConfirmOrderBtn();
 		cp.verifyOrderCompletion();
+		System.out.println("all test cases executed successfully.");
 		
 		tearDown();
 	}
